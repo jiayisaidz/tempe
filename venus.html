@@ -16,7 +16,7 @@ var slug = document.location.pathname;
 var ctld = blog.substr(blog.lastIndexOf("."));
 var currentURL=location.href;
 var str = currentURL;
-  var res = str.replace("https://mars.saidz.my.id/venus.html?url=", "");
+  var res = str.replace("https://mars.saidz.my.id/venus.html?f=", "");
 $(".Visit_Link").hide();
 function changeLink(){
     var decodedString = Base64.decode(res);
@@ -82,7 +82,7 @@ window.open(e, "_self")
 }
 var currentURL = location.href,
 str = currentURL,
-res = str.replace("https://mars.saidz.my.id/venus.html?url=", "");
+res = str.replace("https://mars.saidz.my.id/venus.html?f=", "");
 document.write('<button target="_self" class="btn btn-success" style="display: block; font-size:small" id="download" onclick="changeLink()">Continue</button>');
 onload: generate();
 //]]>

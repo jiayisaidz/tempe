@@ -1,1 +1,74 @@
-Nooob
+<html>
+<head>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta name='robots' content='noindex, nofollow'/>
+<title>Download Link</title>
+<style>
+body {max-width: 720px; margin: 1em auto; border-left: 10px double #ff0000; border-right: 10px double #ff0000; padding: 25px 15px;text-align:center;}
+.top {margin: 1em auto;} .top b, #timer {color:red;}
+.mid {margin: 15px auto;} 
+a.dlink {display:inline-block;background:blue;color:white;padding:  5px 9px; margin: 20px auto; font-weight:bold;}
+a.dlink:hover, a.dlink:active {background: red;}
+</style>
+<script src="https://alwingulla.com/88/tag.min.js" data-zone="16149" async data-cfasync="false"></script>
+<script>
+function getUrlVars(param=null)
+{
+	if(param !== null)
+	{
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++)
+		{
+			hash = hashes[i].split('=');
+			vars.push(hash[0]);
+			vars[hash[0]] = hash[1];
+		}
+		return vars[param];
+	} 
+	else 
+	{
+		return null;
+	}
+}
+
+var param1 = getUrlVars("l");
+	
+		var counter = 10;
+		function countDown(){
+			if(counter >= 0){
+				document.getElementById("timer").innerHTML = counter;
+			} else {
+				download();
+				return;
+			}
+			counter -=1;
+
+			var counter2 = setTimeout("countDown()",1000);
+			return;
+		}
+
+		function download(){
+			document.getElementById("link").innerHTML = "<a class='dlink' href='//" + atob(param1) +"'>Download Now</a>";
+		}
+
+	</script>
+</head>
+<body onload="countDown();">
+
+<h1>Your Download Link</h1>
+<script>
+
+var param2 = getUrlVars("t");
+document.write('<div class="top">Hello, Thak You for Downloading <b>'+param2+'</b> from our website </div>');
+</script>
+<div class="mid">
+	Your Download Link Will Appear in <span id="timer"></span> Sec
+</div>
+<span id="link"></span>
+<div class="bot">
+	Try Using Other Available Download URL if this Link Error - Dead / Deleted / 404 Not Found.<br/>
+	Please Levae Comment if All the Download links was inActive. We Will Fix it As Soon as PoSSibLE.
+</div>
+</body>
+</html>
